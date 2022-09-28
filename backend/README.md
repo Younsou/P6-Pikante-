@@ -4,7 +4,9 @@ pour lancer le serveur front: `npm run start` , ou alors: `ng serve`
 Navigate to `http://localhost:4200/`
 
 ## backend
-pour lancer le server back: `nodemon server`
+Référez vous au `../backend/package.json` pour installer toute les dependencies, comme Express et Mongoose...
+
+Une fois tout celà installer, pour lancer le server back au terminal entrez: `nodemon server`
 
 # pour la route POST --------------> "signup"
 `http://localhost:3000/api/auth/signup`
@@ -33,34 +35,33 @@ Body-->raw :
   "userId": "xxxxxxxxxxxxxxx"
 }
 
+# pour la route GET ---------------> "getOneSauce"
+`http://localhost:3000/api/sauces/:id/`
+
+Authorization-->Bearer Token: xxxxxxx
+Params--> KEY: userId VALUE: _id de l'user
+Body-->none
+
 # pour la route POST --------------> "createSauce"
 `http://localhost:3000/api/sauces`
 
-Params--> KEY: userId VALUE: _id de l'use
+Params--> KEY: userId VALUE: _id de l'user
 Authorization--> Bearer Token: xxxxxxxxxx
-Body-->form-data66>
+Body-->form-data-->
   KEY: SauceModel
   VALUE:
        {
-            "usersLiked": [],
-            "usersDisliked": [],
             "userId": "xxxxxxxxxxxxxxxxxxx",
             "name": "xxxxxxx",
             "manufacturer": "xxxx",
             "description": "xxxxxxx",
             "mainPepper": "xxxxxxxxx",
-            "imageUrl": "http://localhost:3000/images/xxxxxxx",
+            "imageUrl": "",
             "heat": 1,
             "__v":0
         }
-
-# pour la route GET ---------------> "getOneSauce"
-`http://localhost:3000/api/sauces/:id/`
-
-
-Authorization-->Bearer Token: xxxxxxx
-Params--> KEY: userId VALUE: _id de l'user
-Body-->none
+  KEY: image
+  file et selectionner l'image
 
 # pour la route PUT ---------------> "modifySauce"
 `http://localhost:3000/api/sauces/:id/`
@@ -77,10 +78,13 @@ Body-->form data-->
             "manufacturer": "xxxx",
             "description": "xxxxxxx",
             "mainPepper": "xxxxxxxxx",
-            "imageUrl": "http://localhost:3000/images/xxxxxxx",
+            "imageUrl": "",
             "heat": 1
             "__v":0
         }
+  KEY: image
+  file et selectionner l'image
+      
 
 # pour la route DELETE ------------> "deleteSauce"
 `http://localhost:3000/api/sauces/:id/`
@@ -94,6 +98,6 @@ Authorization--> Bearer Token: xxxxxxxxx
 Body-->raw : 
 
 {
-  "userId": "xxxxxxxxxxxxxxx"
+  "userId": "xxxxxxxxxxxxxxx",
   "like" : 0 (-1 dislike, 0 neutre, 1like)
 }

@@ -16,7 +16,7 @@ exports.getAllSauces = async (req, res) => {
 exports.createSauce = async (req, res) => {
     console.log(req.body);
     const sauceObject = JSON.parse(req.body.sauce);
-    // 
+
     //delete sauceObject._id;
     //delete sauceObject._userId;
     const sauce = new SauceModel({
