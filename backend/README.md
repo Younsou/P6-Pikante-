@@ -8,6 +8,12 @@ Référez vous au `../backend/package.json` pour installer toute les dependencie
 
 Une fois tout celà installer, pour lancer le server back au terminal entrez: `nodemon server`
 
+
+## ------------------------------------------------------------------------- ##
+## ----|||------|||---------------------------------|||------|||---------- ##
+## ----|||------|||----    POUR LES REQUETES    ----|||------|||-------- ##
+## ----\v/------\v/---------------------------------\v/------\v/------ ##
+## -----V--------V-----------------------------------V--------V----- ##
 # pour la route POST --------------> "signup"
 `http://localhost:3000/api/auth/signup`
 
@@ -83,8 +89,7 @@ Body-->form data-->
             "__v":0
         }
   KEY: image
-  file et selectionner l'image
-      
+  file et selectionner l'image    
 
 # pour la route DELETE ------------> "deleteSauce"
 `http://localhost:3000/api/sauces/:id/`
