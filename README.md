@@ -9,6 +9,8 @@ Référez vous au `../backend/package.json` pour installer toute les dependencie
 Une fois tout celà installer, pour lancer le server back au terminal entrez: `nodemon server`
 
 
+
+
 ## ----|||------|||-----------------------------------|||------|||----- ##
 ## ----|||------|||-----------------------------------|||------|||----- ##
 ## ---\|||/----\|||/---------------------------------\|||/----\|||/---- ##
