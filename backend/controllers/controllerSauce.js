@@ -47,7 +47,7 @@ exports.getOneSauce = async (req, res) => {
 };
 
 // Controller pour modifier une sauce image, nom, description: ========================================
-exports.modifySauce = (req, res, next) => {
+exports.modifySauce = (req, res) => {
     const sauceObject = req.file ? {
         ...JSON.parse(req.body.sauce),
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`

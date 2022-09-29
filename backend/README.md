@@ -9,31 +9,37 @@ Référez vous au `../backend/package.json` pour installer toute les dependencie
 Une fois tout celà installer, pour lancer le server back au terminal entrez: `nodemon server`
 
 
-## ------------------------------------------------------------------------- ##
-## ----|||------|||---------------------------------|||------|||---------- ##
-## ----|||------|||----    POUR LES REQUETES    ----|||------|||-------- ##
-## ----\v/------\v/---------------------------------\v/------\v/------ ##
-## -----V--------V-----------------------------------V--------V----- ##
-# pour la route POST --------------> "signup"
+## ----|||------|||-----------------------------------|||------|||------------ ##
+## ----|||------|||-----------------------------------|||------|||---------- ##
+## ---\|||/----\|||/-----|` POUR LES REQUETES `|-----\|||/----\|||/------- ##
+## ----\v/------\v/-----------------------------------\v/------\v/------ ##
+## -----V--------V-------------------------------------V--------V----- ##
+# {1} POST pour la route --------------> "signup"
+
 `http://localhost:3000/api/auth/signup`
 
+
 Body-->raw:
 {
     "email" : "xxxxxxxxx",
     "password" : "xxxxxx"
 }
 
-# pour la route POST --------------> "login"
+
+# {2} POST pour la route --------------> "login"
 `http://localhost:3000/api/auth/login`
 
+
 Body-->raw:
 {
     "email" : "xxxxxxxxx",
     "password" : "xxxxxx"
 }
 
-# pour la route GET ---------------> "getAllSauces"
+
+# {3} GET pour la route ---------------> "getAllSauces"
 `http://localhost:3000/api/sauces`
+
 
 Authorization--> Bearer Token: xxxxxxxxx
 Body-->raw : 
@@ -41,20 +47,24 @@ Body-->raw :
   "userId": "xxxxxxxxxxxxxxx"
 }
 
-# pour la route GET ---------------> "getOneSauce"
+
+# {4} GET pour la route ---------------> "getOneSauce"
 `http://localhost:3000/api/sauces/:id/`
+
 
 Authorization-->Bearer Token: xxxxxxx
 Params--> KEY: userId VALUE: _id de l'user
 Body-->none
 
-# pour la route POST --------------> "createSauce"
+
+# {5} POST pour la route --------------> "createSauce"
 `http://localhost:3000/api/sauces`
+
 
 Params--> KEY: userId VALUE: _id de l'user
 Authorization--> Bearer Token: xxxxxxxxxx
 Body-->form-data-->
-  KEY: SauceModel
+  KEY: sauce
   VALUE:
        {
             "userId": "xxxxxxxxxxxxxxxxxxx",
@@ -67,16 +77,19 @@ Body-->form-data-->
             "__v":0
         }
   KEY: image
-  file et selectionner l'image
+  file et selectionner l'image 
 
-# pour la route PUT ---------------> "modifySauce"
-`http://localhost:3000/api/sauces/:id/`
+
+# {6} PUT pour la route ---------------> "modifySauce"
+`http://localhost:3000/api/sauces/:id/` 
+(exemple: `http://localhost:3000/api/sauces/6335dfbeed14792ca91a46b8?userId=6334691e96136017c7eef30f` )
+
 
 Params--> KEY: userId VALUE: _id de l'user
 Authorization-->Bearer Token: xxxxxxx
 
 Body-->form data-->
-  KEY:
+  KEY: sauce
   VALUE:
         {
             "userId": "xxxxxxxxxxxxxxxxxxx",
@@ -91,13 +104,18 @@ Body-->form data-->
   KEY: image
   file et selectionner l'image    
 
-# pour la route DELETE ------------> "deleteSauce"
-`http://localhost:3000/api/sauces/:id/`
+
+# {7} DELETE pour la route ------------> "deleteSauce"
+`http://localhost:3000/api/sauces/:id/` (adress URL meme exemple que modify)
+
 
 Params--> KEY: userId VALUE: _id de l'user
+Authorization-->Bearer Token: xxxxxxx
 
-# pour la route POST --------------> "likeDislikeSauce"
+
+# {8} POST pour la route --------------> "likeDislikeSauce"
 `http://localhost:3000/api/sauces/:id/like`
+
 
 Authorization--> Bearer Token: xxxxxxxxx
 Body-->raw : 
