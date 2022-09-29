@@ -1,3 +1,7 @@
+Projet 6 du parcours OpenClassRooms:
+Construir une API sécurisée pour une application d'avis gastronomiques
+backend créer de zéro
+
 ## frontend
 au terminal: `npm install`
 pour lancer le serveur front: `npm run start` , ou alors: `ng serve`
