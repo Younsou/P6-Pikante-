@@ -1,7 +1,11 @@
+// Importation du framework Express:
 const express = require('express');
 const bodyParser = require('body-parser');
+// Importation du SQL MongoDB pour la base de données:
 const mongoose = require('mongoose');
+// Importation module pour travailler avec les chemins de fichiers et de répertoires:
 const path = require('path');
+// Ce Module charge les variables d'environnement d'un fichier .env dans process.env.
 const dotenv = require('dotenv');
 const result = dotenv.config();
 

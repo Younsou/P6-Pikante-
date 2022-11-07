@@ -1,3 +1,4 @@
+// Importation du SQL MongoDB pour la base de données:
 const mongoose = require('mongoose');
 
 const uniqueValidator = require('mongoose-unique-validator');

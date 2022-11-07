@@ -1,3 +1,9 @@
+.header-nav {
+  max-width: 100%;
+  background-color: bisque;
+  border-bottom: thin solid rgb(77, 43, 43);
+}
+
 nav {
   box-sizing: border-box;
   width: 100%;
@@ -9,16 +15,18 @@ nav {
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  border-bottom: thin solid black;
+
 }
 
 h1 {
+  color: rgb(77, 43, 43);
   font-weight: 700;
   font-size: 2.4em;
   margin: 0;
 }
 
 h5 {
+  color: rgb(77, 43, 43);
   font-size: 1.2em;
   font-weight: 400;
   margin: 0;
@@ -37,10 +45,12 @@ h5 {
   img {
     height: 4.5em;
   }
+
   margin-right: 1em;
 }
 
-.left-nav, .right-nav {
+.left-nav,
+.right-nav {
   align-self: center;
   width: 30%;
 }
@@ -52,6 +62,7 @@ h5 {
 }
 
 ul {
+
   list-style: none;
   padding: 0;
   margin: 0;
@@ -63,10 +74,11 @@ li {
 }
 
 a {
-  color: black;
+  color: rgb(77, 43, 43);
   font-weight: 400;
   text-decoration: none;
   cursor: pointer;
+
   &:hover {
     text-decoration: underline;
   }
@@ -75,4 +87,88 @@ a {
 .active {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.logout {
+  position: absolute;
+  font-weight: 700;
+  right: 5%;
+  bottom: 42.5%;
+}
+
+@media screen and (max-width: 612px) {
+  nav {
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    color: rgb(77, 43, 43);
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-top: 10px;
+  }
+
+  h5 {
+    color: rgb(77, 43, 43);
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 20px;
+  }
+
+  .logo {
+    align-items: flex-start;
+    margin: 0;
+
+  }
+
+  .logo-text {
+    text-align: center;
+  }
+
+  .logo-image {
+    img {
+      height: 7em;
+      position: absolute;
+      left: 15px;
+      right: 80%;
+      margin-right: 10px;
+    }
+  }
+
+  .left-nav {
+    width: 100%;
+
+  }
+
+  .right-nav {
+    padding-left: 24px;
+    align-self: center;
+    width: 100%;
+
+    ul {
+      justify-content: center;
+    }
+  }
+
+
+  ul {
+    justify-content: space-between;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+
+  a {
+    color: rgb(77, 43, 43);
+    font-weight: 400;
+  }
+
+  .logout {
+    right: 40%;
+    left: 40%;
+    bottom: 15px;
+  }
 }
